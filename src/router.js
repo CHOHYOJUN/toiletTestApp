@@ -12,13 +12,22 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/profile',
+      name: 'Profile',
+      component: () => import('@/components/User/Profile.vue')
+    // beforeEnter: AuthGuard
+    },
+    {
+      path: '/signup',
+      name: 'Signup',
+      component: () => import('@/components/User/Signup.vue')
+    },
+    {
+      path: '/signin',
+      name: 'Signin',
+      component: () => import('@/components/User/Signin.vue')
     }
-  /*
-   {
-      path: '/about',
-      name: 'about',
-      component: () => import('./views/About.vue')
-    }
-    */
   ]
 })
